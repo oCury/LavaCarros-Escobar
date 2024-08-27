@@ -1,0 +1,65 @@
+Modelo Relacional
+
+Clientes
+
+id_cliente (PK)
+nome
+telefone
+email
+endereço
+Serviços
+
+id_serviço (PK)
+descrição
+preço
+duração_estimada
+Funcionários
+
+id_funcionário (PK)
+nome
+cargo
+telefone
+Produtos
+
+id_produto (PK)
+nome
+descrição
+preço
+estoque
+id_fornecedor (FK)
+Fornecedores
+
+id_fornecedor (PK)
+nome
+contato
+telefone
+Vendas
+
+id_venda (PK)
+id_produto (FK)
+id_cliente (FK)
+quantidade
+data_venda
+Pedidos
+
+id_pedido (PK)
+id_cliente (FK)
+data_pedido
+status
+Pedido_Serviço (tabela associativa)
+
+id_pedido (FK)
+id_serviço (FK)
+id_funcionário (FK)
+Pedido_Produto (tabela associativa)
+
+id_pedido (FK)
+id_produto (FK)
+quantidade
+Pagamentos
+
+id_pagamento (PK)
+id_pedido (FK)
+valor_pago
+data_pagamento
+método_pagamento
